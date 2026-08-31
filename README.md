@@ -79,16 +79,19 @@ CREATE TABLE cliente (
     Nombre VARCHAR(100) NOT NULL,
     Numero VARCHAR(20) NOT NULL
 );
+-- 2. Tabla Asistencias
 CREATE TABLE asistencia (
     IdAsistencia INT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(100) NOT NULL,
     Precio DECIMAL(10,2) NOT NULL
 );
+-- 3. Tabla Agentes
 CREATE TABLE agente (
     IdAgente INT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(100) NOT NULL,
     PorcComision DECIMAL(5,2) NOT NULL
 );
+-- 4. Tabla Ventas (Transaccional)
 CREATE TABLE Venta (
     IdVenta INT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     IdCliente INT(20) NOT NULL,

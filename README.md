@@ -73,6 +73,7 @@ Se dividió el dominio en **4 entidades relacionales con dependencias funcionale
 ## 💻 Script de Creación en SQL (DDL)
 
 ```sql
+-- 1. Tabla Clientes
 CREATE TABLE cliente (
     IdCliente INT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(100) NOT NULL,

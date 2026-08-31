@@ -70,6 +70,44 @@ Se dividió el dominio en **4 entidades relacionales con dependencias funcionale
 
 ---
 
+## 💻 Script de Creación en SQL (DDL)
+
+```sql
+CREATE TABLE cliente (
+    IdCliente INT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    Numero VARCHAR(20) NOT NULL
+);
+CREATE TABLE asistencia (
+    IdAsistencia INT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    Precio DECIMAL(10,2) NOT NULL
+);
+CREATE TABLE agente (
+    IdAgente INT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    PorcComision DECIMAL(5,2) NOT NULL
+);
+CREATE TABLE Venta (
+    IdVenta INT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    IdCliente INT(20) NOT NULL,
+    IdAsistencia INT(20) NOT NULL,
+    IdAgente INT(20) NOT NULL,
+    Fecha DATETIME  NOT NULL, 
+    CONSTRAINT fk_IdCliente
+        FOREIGN KEY (IdCliente)
+        REFERENCES cliente(IdCliente),
+    CONSTRAINT fk_IdAsistencia
+        FOREIGN KEY (IdAsistencia)
+        REFERENCES asistencia(IdAsistencia),
+    CONSTRAINT fk_IdAgente
+        FOREIGN KEY (IdAgente)
+        REFERENCES agente(IdAgente)
+);
+```
+
+---
+
 ## 👤 Autor
 **Nixon López Peña**  
 *Estudiante de Ingeniería de Sistemas*

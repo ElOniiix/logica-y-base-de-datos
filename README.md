@@ -1,1 +1,1 @@
-# logica-y0-base-de-datos
+# logica-y-base-de-datos

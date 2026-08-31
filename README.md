@@ -92,7 +92,7 @@ CREATE TABLE agente (
     PorcComision DECIMAL(5,2) NOT NULL
 );
 -- 4. Tabla Ventas (Transaccional)
-CREATE TABLE Venta (
+CREATE TABLE venta (
     IdVenta INT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     IdCliente INT(20) NOT NULL,
     IdAsistencia INT(20) NOT NULL,
